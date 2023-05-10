@@ -1,0 +1,26 @@
+defmodule Math do
+  def add(a, b) do
+    a + b
+  end
+
+  def subtract(a, b) do
+    a - b
+  end
+
+  def multiply(a, b) do
+    a * b
+  end
+
+  def divide(a, b) when b != 0 do
+    a / b
+  end
+end
+
+IO.puts("Enter two numbers:")
+num1 = IO.gets("") |> String.trim() |> String.to_integer()
+num2 = IO.gets("") |> String.trim() |> String.to_integer()
+
+IO.puts("Sum: #{Math.add(num1, num2)}")
+IO.puts("Difference: #{Math.subtract(num1, num2)}")
+IO.puts("Product: #{Math.multiply(num1, num2)}")
+IO.puts("Quotient: #{Math.divide(num1, num2)}")
